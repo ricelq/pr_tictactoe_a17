@@ -1,0 +1,11 @@
+<div class="board">
+  <button
+    class="game-cell"
+    *ngFor="let cell of board; let i = index"
+    (click)="play(i)"
+  >
+    {{ cell }}
+  </button>
+</div>
+<div *ngIf="winner">Winner: {{ winner }}</div>
+<button (click)="reset()">Reset</button>
